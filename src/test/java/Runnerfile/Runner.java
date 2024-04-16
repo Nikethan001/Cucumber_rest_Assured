@@ -6,7 +6,7 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        tags = "@Outcome",
+        tags = "@Celsius",
         features = "src/test/Feature/",
         //features = "src/test/Feature/website.feature" ,
         glue = "Cucumber_rest",

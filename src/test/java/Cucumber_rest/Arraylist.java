@@ -7,6 +7,8 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Assert;
 
+import java.util.ArrayList;
+
 public class Arraylist {
     Response response;
     RestAssured restAssured;
@@ -35,7 +37,7 @@ public class Arraylist {
     @Then("User validate the currencies as {string}")
     public void user_validate_the_currencies_as(String string)
     {
-        Arraylist<String> Titles = new Arraylist<>();
+        ArrayList<String> Titles = new ArrayList<>();
         int currencylist = xml_path_obj.get("definitions.types.schema.simpleType.name.size()");
         //System.out.println("Currencies "+currencylist);
         for (int i=0;i<currencylist;i++)

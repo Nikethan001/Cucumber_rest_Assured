@@ -21,8 +21,8 @@ public class Macbook {
         data_price1 = price;
     }
 
-    @Then("User create a conversion")
-    public void user_create_a_conversion()
+    @Then("User create a conversion request body.")
+    public void user_create_a_conversion_request_body()
     {
         request_body ="{\"name\":\""+name1+"\",\n" +
                 "\"data\":{\"year\":"+data_year1+",\n" +
@@ -40,8 +40,8 @@ public class Macbook {
         System.out.println("Response: "+response.getBody().asString());
     }
 
-    @When("User see the status code as {string}")
-    public void user_see_the_status_code_as(String status_code)
+    @When("User validate the status code {string}")
+    public void user_validate_the_status_code(String status_code)
     {
         int Statuscode = response.statusCode();
         Assert.assertEquals(String.valueOf(Statuscode),status_code);
